@@ -18,11 +18,11 @@ void printHexWithPadding(uint64_t n, uint8_t size) {
   }
 }
 
-void printRegister(uint8_t address, uint64_t opts) {
+uint64_t printRegister(uint8_t address, uint64_t opts) {
   assert(address < NUM_REGISTERS);
-  const char *name = ldcRegisterNames[address];
+  const char* name = ldcRegisterNames[address];
   if (!name || !name[0]) {
-    return;
+    return 0;
   }
 
   // Get raw value and update registerMap
@@ -42,8 +42,12 @@ void printRegister(uint8_t address, uint64_t opts) {
     mask = (1ULL << (size * 8)) - 1ULL;
   }
 
-  uint64_t value = raw & mask;
-  Serial.printf("  %*s: ", LDC_REG_NAME_WIDTH, name);
+  unsigned long value = raw & mask;
+  Serial.print("  ");
+  Serial.print(name);
+  Serial.print(": ");
   printHexWithPadding(value, size);
-  Serial.print("\n");
+  Serial.println();
+
+  return value;
 }

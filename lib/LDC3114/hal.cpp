@@ -630,13 +630,13 @@ void DetermineDevice(void)
         printHexWithPadding(Address_Select, 1);
         Serial.print(", deviceID=");
         printHexWithPadding(deviceID, ldcRegisterSize[DEVICE_ID_ADDRESS]);
-        Serial.print("\n");
+        Serial.println();
         return;
     }
 
     Serial.print("ERROR: No LDC device found at I2C ");
     printHexWithPadding(Address_Select, 1);
-    Serial.print("\n");
+    Serial.println();
 }
 
 

@@ -10,7 +10,7 @@ enum PrintRegisterOpts : uint64_t {
   PREG_NO_READ = 1 << 0,  // Bit 0: read from buffer instead of making I2C request
 };
 
-void printRegister(uint8_t address, uint64_t opts = PREG_DEFAULT);
+uint64_t printRegister(uint8_t address, uint64_t opts = PREG_DEFAULT);
 void printHexWithPadding(uint64_t n, uint8_t size);
 
 #endif  // UTILS_H_

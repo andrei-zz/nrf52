@@ -15,11 +15,12 @@ extern "C" {
 void setup() {
   Serial.begin(115200);
   #if WAIT_FOR_SERIAL
+    delay(5000);
     while (!Serial);
   #endif
 
   #if LOG_LEVEL > 0
-    Serial.printf("init():\n");
+    Serial.println("init():");
   #endif
   InitLDC();
 
@@ -39,7 +40,7 @@ void setup() {
     printRegister(SENSOR2_CONFIG_ADDRESS);
     printRegister(SENSOR3_CONFIG_ADDRESS);
 
-    Serial.printf("\n");
+    Serial.println();
   #endif
 }
 
@@ -47,16 +48,16 @@ void loop() {
   readRawData();
 
   #if LOG_LEVEL > 0
-    Serial.printf("loop():\n");
+    Serial.println("loop():");
 
-    printRegister(STATUS_ADDRESS, PREG_NO_READ);
-    printRegister(OUT_ADDRESS, PREG_NO_READ);
+    uint64_t status = printRegister(STATUS_ADDRESS, PREG_NO_READ);
+    // printRegister(OUT_ADDRESS, PREG_NO_READ);
     printRegister(RAW_DATA0_ADDRESS, PREG_NO_READ);
     printRegister(RAW_DATA1_ADDRESS, PREG_NO_READ);
     printRegister(RAW_DATA2_ADDRESS, PREG_NO_READ);
     printRegister(RAW_DATA3_ADDRESS, PREG_NO_READ);
 
-    Serial.printf("\n");
+    Serial.println();
   #endif
 
   delay(100);
