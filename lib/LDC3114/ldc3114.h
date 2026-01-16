@@ -1189,9 +1189,9 @@ uint16_t    combineBytes(uint8_t upperByte, uint8_t lowerByte);
     #define RAW_DATA0_DEFAULT                                               ((uint32_t) 0x000000)
 
     /* RAW_DATA0 register field masks */
-    #define RAW_DATA0_RAW_DATA0_23:16_MASK                                  ((uint32_t) 0xFF0000)
-    #define RAW_DATA0_RAW_DATA0_15:8_MASK                                   ((uint32_t) 0x00FF00)
-    #define RAW_DATA0_RAW_DATA0_7:0_MASK                                    ((uint32_t) 0x0000FF)
+    #define RAW_DATA0_RAW_DATA0_23_16_MASK                                  ((uint32_t) 0xFF0000)
+    #define RAW_DATA0_RAW_DATA0_15_8_MASK                                   ((uint32_t) 0x00FF00)
+    #define RAW_DATA0_RAW_DATA0_7_0_MASK                                    ((uint32_t) 0x0000FF)
 
 
 
@@ -1210,9 +1210,9 @@ uint16_t    combineBytes(uint8_t upperByte, uint8_t lowerByte);
     #define RAW_DATA1_DEFAULT                                               ((uint32_t) 0x000000)
 
     /* RAW_DATA1 register field masks */
-    #define RAW_DATA1_RAW_DATA1_16:23_MASK                                  ((uint32_t) 0xFF0000)
-    #define RAW_DATA1_RAW_DATA1_15:8_MASK                                   ((uint32_t) 0x00FF00)
-    #define RAW_DATA1_RAW_DATA1_7:0_MASK                                    ((uint32_t) 0x0000FF)
+    #define RAW_DATA1_RAW_DATA1_16_23_MASK                                  ((uint32_t) 0xFF0000)
+    #define RAW_DATA1_RAW_DATA1_15_8_MASK                                   ((uint32_t) 0x00FF00)
+    #define RAW_DATA1_RAW_DATA1_7_0_MASK                                    ((uint32_t) 0x0000FF)
 
 
 
@@ -1231,9 +1231,9 @@ uint16_t    combineBytes(uint8_t upperByte, uint8_t lowerByte);
     #define RAW_DATA2_DEFAULT                                               ((uint32_t) 0x000000)
 
     /* RAW_DATA2 register field masks */
-    #define RAW_DATA2_RAW_DATA2_23:16_MASK                                  ((uint32_t) 0xFF0000)
-    #define RAW_DATA2_RAW_DATA2_15:8_MASK                                   ((uint32_t) 0x00FF00)
-    #define RAW_DATA2_RAW_DATA2_7:0_MASK                                    ((uint32_t) 0x0000FF)
+    #define RAW_DATA2_RAW_DATA2_23_16_MASK                                  ((uint32_t) 0xFF0000)
+    #define RAW_DATA2_RAW_DATA2_15_8_MASK                                   ((uint32_t) 0x00FF00)
+    #define RAW_DATA2_RAW_DATA2_7_0_MASK                                    ((uint32_t) 0x0000FF)
 
 
 
@@ -1252,9 +1252,9 @@ uint16_t    combineBytes(uint8_t upperByte, uint8_t lowerByte);
     #define RAW_DATA3_DEFAULT                                               ((uint32_t) 0x000000)
 
     /* RAW_DATA3 register field masks */
-    #define RAW_DATA3_RAW_DATA3_23:16_MASK                                  ((uint32_t) 0xFF0000)
-    #define RAW_DATA3_RAW_DATA3_15:8_MASK                                   ((uint32_t) 0x00FF00)
-    #define RAW_DATA3_RAW_DATA3_7:0_MASK                                    ((uint32_t) 0x0000FF)
+    #define RAW_DATA3_RAW_DATA3_23_16_MASK                                  ((uint32_t) 0xFF0000)
+    #define RAW_DATA3_RAW_DATA3_15_8_MASK                                   ((uint32_t) 0x00FF00)
+    #define RAW_DATA3_RAW_DATA3_7_0_MASK                                    ((uint32_t) 0x0000FF)
 
 
 
@@ -1273,8 +1273,8 @@ uint16_t    combineBytes(uint8_t upperByte, uint8_t lowerByte);
     #define MANUFACTURER_ID_DEFAULT                                         ((uint16_t) 0x5449)
 
     /* MANUFACTURER_ID register field masks */
-    #define MANUFACTURER_ID_MANUFACTURER_ID_[15:8]_MASK                     ((uint16_t) 0xFF00)
-    #define MANUFACTURER_ID_MANUFACTURER_ID_[7:0]_MASK                      ((uint16_t) 0x00FF)
+    #define MANUFACTURER_ID_MANUFACTURER_ID_15_8_MASK                       ((uint16_t) 0xFF00)
+    #define MANUFACTURER_ID_MANUFACTURER_ID_7_0_MASK                        ((uint16_t) 0x00FF)
 
 
 
@@ -1293,8 +1293,8 @@ uint16_t    combineBytes(uint8_t upperByte, uint8_t lowerByte);
     #define DEVICE_ID_DEFAULT                                               ((uint16_t) 0x4000)
 
     /* DEVICE_ID register field masks */
-    #define DEVICE_ID_DEVICE_ID_[15:8]_MASK                                 ((uint16_t) 0xFF00)
-    #define DEVICE_ID_DEVICE_ID_[7:0]_MASK                                  ((uint16_t) 0x00FF)
+    #define DEVICE_ID_DEVICE_ID_15_8_MASK                                   ((uint16_t) 0xFF00)
+    #define DEVICE_ID_DEVICE_ID_7_0_MASK                                    ((uint16_t) 0x00FF)
 
 
 

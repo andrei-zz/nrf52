@@ -36,6 +36,7 @@
 #define INTERFACE_H_
 
 #include "ldc3114.h"
+
 #ifdef EXAMPLE_CODE
 #else
 //#include "eeprom.h"

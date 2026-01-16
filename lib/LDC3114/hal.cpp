@@ -36,7 +36,7 @@
 #include <Wire.h>
 
 extern "C" {
-#include "hal.h"
+  #include "hal.h"
 }
 #include "utils.h"
 
